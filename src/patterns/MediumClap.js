@@ -84,7 +84,7 @@ const withClapAnimation = (WrappedComponent) => {
         circleBurst,
       ]);
       setAnimationTimeline(newAnimationTimeline);
-    }, []);
+    }, [animationTimeline]);
     return (
       <WrappedComponent {...props} animationTimeline={animationTimeline} />
     );
@@ -218,7 +218,6 @@ const ClapCount = ({ count }) => {
 };
 
 const CountTotal = ({ countTotal }) => {
-  console.log("count total =>", countTotal);
   return (
     <span id="count_total" className="total">
       {countTotal}
